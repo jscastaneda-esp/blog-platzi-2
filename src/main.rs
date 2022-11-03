@@ -50,7 +50,7 @@ async fn new_post(db: Db, item: Json<NewPostHandler>) -> Result<Json<Post>, Stat
 
 #[launch]
 fn rocket() -> _ {
-    dotenv().ok();
+    //dotenv().ok();
 
     rocket::build()
         .mount("/", routes![index, get_post, new_post])
